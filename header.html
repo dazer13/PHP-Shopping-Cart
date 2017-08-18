@@ -1,0 +1,78 @@
+
+<div align="center">
+
+  <form name="form1" onsubmit="return valid();">
+   <input type="text" id="user" placeholder="username"/>
+   <input type="password" id="userpass" placeholder="password"/>
+   <input type="submit" value="Login" name="submit" class="form-submit"/> 
+    
+  </form>
+  	<span id="err">Login to your account!</span>
+    <a href="cart.php"><img class="shopping" src="http://www.freeiconspng.com/uploads/grocery-cart-icon-28.png" width="30px" height="30px" /></a>
+   </div>
+  
+  <!-- site header-->
+   <div class="header_area" >
+      <div class="logo floatleft"><a href="index.php"><img src="images/LogoImg.PNG" alt="" width="130px" height="100px" /></a></div>
+	  <!--nav links-->
+      <div class="top_menu floatleft">
+        <ul>
+          <li><a class="active" style="color:#FFF" href="index.php">Home</a></li>
+          <li><a  class="active" style="color:#FFF" href="aboutus.php">About us</a></li>
+          <li><a  class="active"  style="color:#FFF" href="product.php">Products</a></li>
+          <li><a class="active"  style="color:#FFF" href="contact.php">Contact us</a></li>
+          <li><a class="active"  style="color:#FFF" href="Register.php">Register</a></li>
+        </ul>
+	  </div>
+	  
+	  <!-- header right section-->
+      <div class="social_plus_search floatright">
+        
+		
+		<!--search section-->
+        <div class="search">
+          <form action="search.php" method="post" id="search_form" name="search_form">
+            <input type="text" name="search_text" placeholder="Search for Products" id="s" />
+            <input type="submit" id="searchform" name="search" value="search" />
+            <input type="hidden" value="post" name="post_type" />
+		
+          </form>
+         </div>
+        </div>
+    </div>
+<script type="text/javascript">
+function valid()
+{
+ var err="";
+ var name = document.getElementById( "user" ); 
+ var password = document.getElementById( "userpass" );
+
+ 
+ if( name.value == "" )
+ {
+  err = " Please enter the your valid Username ";
+  document.getElementById( "err" ).innerHTML = err;
+  return false;
+ }
+ else if( password.value == "" )
+ {
+  err= " Please enter your valid Password . ";
+  document.getElementById( "err" ).innerHTML = err;
+  return false;
+ }
+ 
+
+ else
+ {
+  return true;
+ }
+}
+
+
+
+function register_load(){
+
+window.location.href = "http://localhost/xtream/Register.php";
+
+}
+</script>
